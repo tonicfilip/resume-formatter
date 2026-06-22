@@ -1,0 +1,52 @@
+{
+  "name": "resume-formatter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --headed"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.590.0",
+    "@aws-sdk/s3-request-presigner": "^3.590.0",
+    "@clerk/nextjs": "^5.1.0",
+    "@sparticuz/chromium": "^123.0.1",
+    "@supabase/supabase-js": "^2.43.0",
+    "next": "14.2.3",
+    "puppeteer-core": "^22.9.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/jest": "^29",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "jest": "^29",
+    "puppeteer": "^22.9.0",
+    "ts-jest": "^29",
+    "typescript": "^5",
+    "@playwright/test": "^1.44.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.test.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": {
+          "module": "commonjs",
+          "esModuleInterop": true
+        }
+      }
+    }
+  }
+}
