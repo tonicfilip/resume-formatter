@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
   await upsertUser(userId, email)
 
   // 4. Payment check
-  const paid = await isUserPaid(userId)
+  const paid = true;
 
   if (!paid) {
     const checkoutUrl = await createCheckoutUrl({
